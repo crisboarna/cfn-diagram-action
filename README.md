@@ -39,6 +39,8 @@
 
 This action uses [cfn-diagram](https://github.com/mhlabs/cfn-diagram) to generate [draw.io](https://draw.io) diagrams or [vis.js](https://visjs.org) generated images of your AWS Cloudformation IaC code.
 
+Ideal for maintaining live documentation where the CI auto-updates the infrastructure diagrams for your docs.
+
 ## Table of Contents
 * [Inputs](#inputs)
 * [Outputs](#outputs)

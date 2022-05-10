@@ -96,7 +96,7 @@
         "@semantic-release/git",
         {
           "assets": [
-            "dist/*",
+            "dist/*.js",
             "package.json",
             "CHANGELOG.md"
           ],
