@@ -1,0 +1,115 @@
+name: PR
+
+on:
+  pull_request:
+    branches:
+      - master
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}-${{ github.ref != 'refs/head/master/' || github.run_number }}
+  cancel-in-progress: ${{ startsWith(github.ref, 'refs/pull/') }}
+
+jobs:
+  verify:
+    runs-on: ubuntu-20.04
+    timeout-minutes: 5
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - name: 📚 Git Checkout
+        uses: actions/checkout@v3
+
+      - name: 🧰 Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: 💽 Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            **/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+
+      - name: 📦 Install Dependencies
+        run: yarn install
+
+      - name: ✨ Linting
+        run: yarn lint
+
+      - name: 🧪 Tests
+        run: yarn test:unit
+
+      - name: 📊 Code Coverage
+        uses: codecov/codecov-action@v3
+        with:
+          directory: ./coverage
+          flags: unittests
+          fail_ci_if_error: true
+
+      - name: 🏗️ Build
+        run: yarn build
+
+      - name: ❌ Cancel Workflow
+        if: ${{ failure() }}
+        uses: actions/github-script@v4
+        with:
+          script: |
+            github.actions.cancelWorkflowRun({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              run_id: context.runId
+            })
+
+  pull-integration:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: 📚 Git Checkout
+        uses: actions/checkout@v3
+
+      - name: 🧰 Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: 📦 Install Dependencies
+        run: npm i --ignore-scripts
+
+      - name: 🧪 Test Draw
+        run: npm run test:integration
+        env:
+          INPUT_PATH_INPUT: test/data/input/**/*.yaml
+          INPUT_PATH_OUTPUT: /dia
+          INPUT_VIEWPORT_WIDTH: 1920
+          INPUT_VIEWPORT_HEIGHT: 1080
+          INPUT_DIAGRAM_TYPE: d
+
+      - name: 🧪 Verify API Draw
+        run: diff dia/API.drawio test/data/output/draw/API.drawio
+
+      - name: 🧪 Verify VPC_ELB Draw
+        run: diff dia/vpc/VPC_ELB.drawio test/data/output/draw/VPC_ELB.drawio
+
+      - name: 🧪 Verify VPC_Redshift Draw
+        run: diff dia/vpc/VPC_Redshift.drawio test/data/output/draw/VPC_Redshift.drawio
+
+      - name: 🧪 Test Html
+        run: npm run test:integration
+        env:
+          INPUT_PATH_INPUT: test/data/input/**/*.yaml
+          INPUT_PATH_OUTPUT: /dia
+          INPUT_VIEWPORT_WIDTH: 1920
+          INPUT_VIEWPORT_HEIGHT: 1080
+          INPUT_DIAGRAM_TYPE: h
+
+      # Vis.js generates nodes in random positions, simple base64 or img diff tools will have too low similarity to be of value
+      - name: 🧪 Verify API Html
+        run: test -e dia/API.png
+
+      - name: 🧪 Verify VPC_ELB Html
+        run: test -e dia/vpc/VPC_ELB.png
+
+      - name: 🧪 Verify VPC_Redshift Html
+        run: test -e dia/vpc/VPC_Redshift.png

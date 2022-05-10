@@ -1,0 +1,31 @@
+name: 'Cloudformation Diagram Visualization'
+description: 'GitHub Action for cfn-diagram, the AWS Cloudformation visualization tool'
+author: 'Cristian Boarna'
+branding:
+  icon: 'aperture'
+  color: blue
+runs:
+  using: 'node16'
+  main: 'index.js'
+inputs:
+  path_input:
+    description: 'Path where the Cloudformation templates can be found'
+    required: true
+  path_output:
+    description: 'Path where the output diagrams should be placed'
+    required: false
+  diagram_type:
+    description: 'What type of diagram export should be executed'
+    required: false
+  diagram_exclude_types:
+    description: 'Cloudformation types to be excluded from cfn-diagram output'
+    required: false
+  diagram_stacks:
+    description: 'Cloudformation stacks to be included in export, defaults to all'
+    required: false
+  viewport_height:
+    description: 'Browser viewport height configuration. Only valid for html|h diagramType'
+    required: false
+  viewport_width:
+    description: 'Browser viewport width configuration. Only valid for html|h diagramType'
+    required: false

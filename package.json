@@ -1,0 +1,128 @@
+{
+  "name": "cfn-diagram-action",
+  "version": "1.0.0",
+  "description": "GitHub Action for cfn-diagram, the AWS Cloudformation visualization tool",
+  "main": "dist/index.js",
+  "source": "src/index.ts",
+  "author": "Cristian Boarna <contact@crisboarna.com>",
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crisboarna/cfn-diagram-action.git"
+  },
+  "bugs": {
+    "url": "https://github.com/crisboarna/cfn-diagram-action/issues"
+  },
+  "homepage": "https://github.com/crisboarna/cfn-diagram-action#readme",
+  "scripts": {
+    "prepare": "husky install",
+    "setup": "curl https://raw.githubusercontent.com/nektos/act/master/install.sh | sudo bash",
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --max-warnings 0",
+    "test": "yarn test:unit",
+    "test:unit": "jest --coverage",
+    "test:integration": "node -r dotenv/config -r ts-node/register src/index.ts",
+    "test:integration:local": "act -j --rm test-integration -W .github/workflows/test_integration.yaml",
+    "build": "rollup -c",
+    "release": "semantic-release"
+  },
+  "dependencies": {
+    "@actions/core": "^1.8.0",
+    "@actions/exec": "^1.1.1",
+    "@mhlabs/cfn-diagram": "^1.1.33",
+    "glob": "^8.0.1",
+    "playwright-chromium": "^1.21.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.1.0",
+    "@commitlint/config-conventional": "^16.0.0",
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.2.1",
+    "@rollup/plugin-typescript": "^8.3.2",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.4",
+    "@types/glob": "^7.2.0",
+    "@types/jest": "^27.4.1",
+    "@types/node": "17.0.31",
+    "@typescript-eslint/eslint-plugin": "~5.23.0",
+    "@typescript-eslint/parser": "~5.23.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "dotenv": "^16.0.0",
+    "eslint": "~8.15.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-import": "2.26.0",
+    "husky": "^8.0.1",
+    "jest": "27.2.3",
+    "prettier": "^2.5.1",
+    "rollup": "^2.72.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "semantic-release": "^19.0.2",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.7.0",
+    "typescript": "~4.6.2"
+  },
+  "keywords": [
+    "Github",
+    "Action",
+    "CI/CD",
+    "cfn-diagram",
+    "cloudformation",
+    "aws"
+  ],
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false,
+          "tarballDir": "dist"
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "dist/*",
+            "package.json",
+            "CHANGELOG.md"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]"
+        }
+      ],
+      [
+        "@semantic-release/github",
+        {
+          "assets": "dist/*.tgz"
+        }
+      ]
+    ],
+    "branches": [
+      "+([0-9])?(.{+([0-9]),x}).x",
+      "master",
+      "next",
+      "next-major",
+      {
+        "name": "beta",
+        "prerelease": true
+      },
+      {
+        "name": "alpha",
+        "prerelease": true
+      }
+    ]
+  }
+}
