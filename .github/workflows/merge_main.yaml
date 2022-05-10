@@ -55,7 +55,7 @@ jobs:
 
       - name: ❌ Cancel Workflow
         if: ${{ failure() }}
-        uses: actions/github-script@v4
+        uses: actions/github-script@v6
         with:
           script: |
             github.actions.cancelWorkflowRun({
