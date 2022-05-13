@@ -34,7 +34,7 @@
     "@actions/core": "^1.8.0",
     "@actions/exec": "^1.1.1",
     "@mhlabs/cfn-diagram": "^1.1.33",
-    "glob": "^8.0.1",
+    "glob": "^8.0.2",
     "playwright-chromium": "^1.21.1"
   },
   "devDependencies": {
