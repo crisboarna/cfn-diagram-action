@@ -5914,17 +5914,17 @@ pkg-dir@^4.2.0:
   dependencies:
     find-up "^4.0.0"
 
-playwright-chromium@^1.22.0:
-  version "1.22.0"
-  resolved "https://registry.yarnpkg.com/playwright-chromium/-/playwright-chromium-1.22.0.tgz#a959f9f1e26fafe46dd730be816d0e3e7f974fd2"
-  integrity sha512-E9xpySRE59PaGuJnlyppsIUk8YvIW7PSGj32GhI2qaM0pHdy21LFJ6T9wzCxU01lAPB5E7/lfoFm0h7Fqemw/Q==
+playwright-chromium@^1.22.1:
+  version "1.22.1"
+  resolved "https://registry.yarnpkg.com/playwright-chromium/-/playwright-chromium-1.22.1.tgz#c0a0d79073dbcfbdc34cf223f245cbb9b7fd47a2"
+  integrity sha512-bvrSyGOOWZeCM/fKScWuNR+DABHjCCNhNL3H9Rpfa7tp0UOG5XuyQ0ZQ3N5eJMxCpw369FkuJuUVdFeEMkmpdw==
   dependencies:
-    playwright-core "1.22.0"
+    playwright-core "1.22.1"
 
-playwright-core@1.22.0:
-  version "1.22.0"
-  resolved "https://registry.yarnpkg.com/playwright-core/-/playwright-core-1.22.0.tgz#e738a0c83f4be0984c953ab25d2bc77545187ecc"
-  integrity sha512-XnDPiV4NCzTtXWxQdyJ6Wg8xhST3ciUjt5mITaxoqOoYggmRtofKm0PXLehfbetXh2ppPYj5U8UhtUpdIE4wag==
+playwright-core@1.22.1:
+  version "1.22.1"
+  resolved "https://registry.yarnpkg.com/playwright-core/-/playwright-core-1.22.1.tgz#59ddf903546171fdfd9c3dc189630c883619667c"
+  integrity sha512-H+ZUVYnceWNXrRf3oxTEKAr81QzFsCKu5Fp//fEjQvqgKkfA1iX3E9DBrPJpPNOrgVzcE+IqeI0fDmYJe6Ynnw==
 
 prelude-ls@^1.2.1:
   version "1.2.1"
@@ -6276,10 +6276,10 @@ rollup-plugin-terser@^7.0.2:
     serialize-javascript "^4.0.0"
     terser "^5.0.0"
 
-rollup@^2.72.1:
-  version "2.72.1"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.72.1.tgz#861c94790537b10008f0ca0fbc60e631aabdd045"
-  integrity sha512-NTc5UGy/NWFGpSqF1lFY8z9Adri6uhyMLI6LvPAXdBKoPRFhIIiBUpt+Qg2awixqO3xvzSijjhnb4+QEZwJmxA==
+rollup@^2.74.1:
+  version "2.74.1"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.74.1.tgz#4fba0ff1c312cc4ee82691b154eee69a0d01929f"
+  integrity sha512-K2zW7kV8Voua5eGkbnBtWYfMIhYhT9Pel2uhBk2WO5eMee161nPze/XRfvEQPFYz7KgrCCnmh2Wy0AMFLGGmMA==
   optionalDependencies:
     fsevents "~2.3.2"
 
