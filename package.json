@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^17.0.0",
-    "@commitlint/cli": "^17.0.0",
+    "@commitlint/cli": "^17.0.1",
     "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.2.1",
@@ -64,7 +64,7 @@
     "rollup-plugin-terser": "^7.0.2",
     "semantic-release": "^19.0.2",
     "ts-jest": "^27.1.4",
-    "ts-node": "^10.7.0",
+    "ts-node": "^10.8.0",
     "typescript": "~4.6.2"
   },
   "keywords": [
