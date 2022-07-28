@@ -1,6 +1,6 @@
 {
   "name": "cfn-diagram-action",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "GitHub Action for cfn-diagram, the AWS Cloudformation visualization tool",
   "main": "dist/index.js",
   "source": "src/index.ts",
