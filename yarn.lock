@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@actions/core@^1.8.2":
-  version "1.8.2"
-  resolved "https://registry.yarnpkg.com/@actions/core/-/core-1.8.2.tgz#67539d669ae9b751430469e9ae4d83e0525973ac"
-  integrity sha512-FXcBL7nyik8K5ODeCKlxi+vts7torOkoDAKfeh61EAkAy1HAvwn9uVzZBY0f15YcQTcZZ2/iSGBFHEuioZWfDA==
+"@actions/core@^1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@actions/core/-/core-1.9.0.tgz#20c1baac5d4bd2508ba1fc3e5f3fc4b8a80d4082"
+  integrity sha512-5pbM693Ih59ZdUhgk+fts+bUWTnIdHV3kwOSr+QIoFHMLg7Gzhwm0cifDY/AG68ekEJAkHnQVpcy4f6GjmzBCA==
   dependencies:
     "@actions/http-client" "^2.0.1"
 
@@ -756,10 +756,10 @@
     open "^7.1.0"
     sha1 "^1.1.1"
 
-"@mhlabs/cfn-diagram@^1.1.33":
-  version "1.1.33"
-  resolved "https://registry.yarnpkg.com/@mhlabs/cfn-diagram/-/cfn-diagram-1.1.33.tgz#d88f2d67e28a97353659ec2e9b8c731c5cdc36ee"
-  integrity sha512-mO39rclLlf3J5tmeCK2a49CJEiLRxNltDCaP/M4SHpkShXlT2Lo/kJfplHven6BmAPwguiQCQlKgOozI3jb95A==
+"@mhlabs/cfn-diagram@^1.1.36":
+  version "1.1.36"
+  resolved "https://registry.yarnpkg.com/@mhlabs/cfn-diagram/-/cfn-diagram-1.1.36.tgz#3f63302a1f2a744238ce20bbf5242b4ddd9b2057"
+  integrity sha512-ArWZiJBcYY7BBbKviQkpaSIPzZ02Jf3rc1VB48eutraM0AeaF98jMdpV8IIxZXQJ5niv1fRgsFU8AGWSvW8Ohw==
   dependencies:
     "@mhlabs/aws-sdk-sso" "0.0.16"
     aws-icons-directory "^0.0.6"
@@ -5984,17 +5984,17 @@ pkg-dir@^4.2.0:
   dependencies:
     find-up "^4.0.0"
 
-playwright-chromium@^1.22.2:
-  version "1.22.2"
-  resolved "https://registry.yarnpkg.com/playwright-chromium/-/playwright-chromium-1.22.2.tgz#9057602b75009848a37d9f75187ce3c928a44354"
-  integrity sha512-msRcdCIJkdM2R6S+NMJZ02uyZHzJ7TIzkjzs3usDJ1Pwacp9HMhv9T/S4AxtpFXFmvMZq7UJYb0x+tCdHx9+0w==
+playwright-chromium@^1.24.1:
+  version "1.24.1"
+  resolved "https://registry.yarnpkg.com/playwright-chromium/-/playwright-chromium-1.24.1.tgz#f4040d3f2c0e379163213ff914e3774a132a8224"
+  integrity sha512-4dPVbwICijhEZ21zXMGu/CF+shWhcmARx3jNFlBUREKJhq9jwQDPRXploJkUQiKLZ69E63wfE5tx5P/bLLr7Tw==
   dependencies:
-    playwright-core "1.22.2"
+    playwright-core "1.24.1"
 
-playwright-core@1.22.2:
-  version "1.22.2"
-  resolved "https://registry.yarnpkg.com/playwright-core/-/playwright-core-1.22.2.tgz#ed2963d79d71c2a18d5a6fd25b60b9f0a344661a"
-  integrity sha512-w/hc/Ld0RM4pmsNeE6aL/fPNWw8BWit2tg+TfqJ3+p59c6s3B6C8mXvXrIPmfQEobkcFDc+4KirNzOQ+uBSP1Q==
+playwright-core@1.24.1:
+  version "1.24.1"
+  resolved "https://registry.yarnpkg.com/playwright-core/-/playwright-core-1.24.1.tgz#032eefaa8f674a4253a6c35a86787f2cbfcd8829"
+  integrity sha512-1RoSDe/oTQS1Ct7Pb8i+vcFKbKYpmVIBXk0IUiD8RvCUMnNl7EJF1OSQ9E8TZ5RYamWkW2Psir9e8Doyz1FnhQ==
 
 prelude-ls@^1.2.1:
   version "1.2.1"
@@ -6006,10 +6006,10 @@ prelude-ls@~1.1.2:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
   integrity sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=
 
-prettier@^2.5.1:
-  version "2.6.2"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.6.2.tgz#e26d71a18a74c3d0f0597f55f01fb6c06c206032"
-  integrity sha512-PkUpF+qoXTqhOeWL9fu7As8LXsIUZ1WYaJiY/a7McAQzxjk82OF0tibkFXVCDImZtWxbvojFjerkiLb0/q8mew==
+prettier@^2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.7.1.tgz#e235806850d057f97bb08368a4f7d899f7760c64"
+  integrity sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==
 
 pretty-format@^27.0.0, pretty-format@^27.5.1:
   version "27.5.1"
