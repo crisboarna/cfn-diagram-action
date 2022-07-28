@@ -33,7 +33,7 @@
   "dependencies": {
     "@actions/core": "^1.9.0",
     "@actions/exec": "^1.1.1",
-    "@mhlabs/cfn-diagram": "^1.1.33",
+    "@mhlabs/cfn-diagram": "^1.1.36",
     "glob": "^8.0.3",
     "playwright-chromium": "^1.24.1"
   },

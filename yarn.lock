@@ -756,10 +756,10 @@
     open "^7.1.0"
     sha1 "^1.1.1"
 
-"@mhlabs/cfn-diagram@^1.1.33":
-  version "1.1.33"
-  resolved "https://registry.yarnpkg.com/@mhlabs/cfn-diagram/-/cfn-diagram-1.1.33.tgz#d88f2d67e28a97353659ec2e9b8c731c5cdc36ee"
-  integrity sha512-mO39rclLlf3J5tmeCK2a49CJEiLRxNltDCaP/M4SHpkShXlT2Lo/kJfplHven6BmAPwguiQCQlKgOozI3jb95A==
+"@mhlabs/cfn-diagram@^1.1.36":
+  version "1.1.36"
+  resolved "https://registry.yarnpkg.com/@mhlabs/cfn-diagram/-/cfn-diagram-1.1.36.tgz#3f63302a1f2a744238ce20bbf5242b4ddd9b2057"
+  integrity sha512-ArWZiJBcYY7BBbKviQkpaSIPzZ02Jf3rc1VB48eutraM0AeaF98jMdpV8IIxZXQJ5niv1fRgsFU8AGWSvW8Ohw==
   dependencies:
     "@mhlabs/aws-sdk-sso" "0.0.16"
     aws-icons-directory "^0.0.6"
