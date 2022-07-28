@@ -6,7 +6,7 @@ branding:
   color: blue
 runs:
   using: 'node16'
-  main: 'index.js'
+  main: 'dist/index.js'
 inputs:
   path_input:
     description: 'Path where the Cloudformation templates can be found'
