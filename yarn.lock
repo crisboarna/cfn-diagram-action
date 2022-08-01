@@ -1452,14 +1452,6 @@
     "@typescript-eslint/typescript-estree" "5.31.0"
     debug "^4.3.4"
 
-"@typescript-eslint/scope-manager@5.27.0":
-  version "5.27.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/scope-manager/-/scope-manager-5.27.0.tgz#a272178f613050ed62f51f69aae1e19e870a8bbb"
-  integrity sha512-VnykheBQ/sHd1Vt0LJ1JLrMH1GzHO+SzX6VTXuStISIsvRiurue/eRkTqSrG0CexHQgKG8shyJfR4o5VYioB9g==
-  dependencies:
-    "@typescript-eslint/types" "5.27.0"
-    "@typescript-eslint/visitor-keys" "5.27.0"
-
 "@typescript-eslint/scope-manager@5.31.0":
   version "5.31.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/scope-manager/-/scope-manager-5.31.0.tgz#f47a794ba84d9b818ab7f8f44fff55a61016c606"
@@ -1472,34 +1464,15 @@
   version "5.31.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/type-utils/-/type-utils-5.31.0.tgz#70a0b7201360b5adbddb0c36080495aa08f6f3d9"
   integrity sha512-7ZYqFbvEvYXFn9ax02GsPcEOmuWNg+14HIf4q+oUuLnMbpJ6eHAivCg7tZMVwzrIuzX3QCeAOqKoyMZCv5xe+w==
-
   dependencies:
     "@typescript-eslint/utils" "5.31.0"
     debug "^4.3.4"
     tsutils "^3.21.0"
 
-"@typescript-eslint/types@5.27.0":
-  version "5.27.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-5.27.0.tgz#c3f44b9dda6177a9554f94a74745ca495ba9c001"
-  integrity sha512-lY6C7oGm9a/GWhmUDOs3xAVRz4ty/XKlQ2fOLr8GAIryGn0+UBOoJDWyHer3UgrHkenorwvBnphhP+zPmzmw0A==
-
 "@typescript-eslint/types@5.31.0":
   version "5.31.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-5.31.0.tgz#7aa389122b64b18e473c1672fb3b8310e5f07a9a"
   integrity sha512-/f/rMaEseux+I4wmR6mfpM2wvtNZb1p9hAV77hWfuKc3pmaANp5dLAZSiE3/8oXTYTt3uV9KW5yZKJsMievp6g==
-
-"@typescript-eslint/typescript-estree@5.27.0":
-  version "5.27.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-5.27.0.tgz#7965f5b553c634c5354a47dcce0b40b94611e995"
-  integrity sha512-QywPMFvgZ+MHSLRofLI7BDL+UczFFHyj0vF5ibeChDAJgdTV8k4xgEwF0geFhVlPc1p8r70eYewzpo6ps+9LJQ==
-  dependencies:
-    "@typescript-eslint/types" "5.27.0"
-    "@typescript-eslint/visitor-keys" "5.27.0"
-    debug "^4.3.4"
-    globby "^11.1.0"
-    is-glob "^4.0.3"
-    semver "^7.3.7"
-    tsutils "^3.21.0"
 
 "@typescript-eslint/typescript-estree@5.31.0":
   version "5.31.0"
@@ -1518,7 +1491,6 @@
   version "5.31.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/utils/-/utils-5.31.0.tgz#e146fa00dca948bfe547d665b2138a2dc1b79acd"
   integrity sha512-kcVPdQS6VIpVTQ7QnGNKMFtdJdvnStkqS5LeALr4rcwx11G6OWb2HB17NMPnlRHvaZP38hL9iK8DdE9Fne7NYg==
-
   dependencies:
     "@types/json-schema" "^7.0.9"
     "@typescript-eslint/scope-manager" "5.31.0"
@@ -1526,14 +1498,6 @@
     "@typescript-eslint/typescript-estree" "5.31.0"
     eslint-scope "^5.1.1"
     eslint-utils "^3.0.0"
-
-"@typescript-eslint/visitor-keys@5.27.0":
-  version "5.27.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/visitor-keys/-/visitor-keys-5.27.0.tgz#97aa9a5d2f3df8215e6d3b77f9d214a24db269bd"
-  integrity sha512-46cYrteA2MrIAjv9ai44OQDUoCZyHeGIc4lsjCUX2WT6r4C+kidz1bNiR4017wHOPUythYeH+Sc7/cFP97KEAA==
-  dependencies:
-    "@typescript-eslint/types" "5.27.0"
-    eslint-visitor-keys "^3.3.0"
 
 "@typescript-eslint/visitor-keys@5.31.0":
   version "5.31.0"
@@ -5986,17 +5950,17 @@ pkg-dir@^4.2.0:
   dependencies:
     find-up "^4.0.0"
 
-playwright-chromium@^1.24.1:
-  version "1.24.1"
-  resolved "https://registry.yarnpkg.com/playwright-chromium/-/playwright-chromium-1.24.1.tgz#f4040d3f2c0e379163213ff914e3774a132a8224"
-  integrity sha512-4dPVbwICijhEZ21zXMGu/CF+shWhcmARx3jNFlBUREKJhq9jwQDPRXploJkUQiKLZ69E63wfE5tx5P/bLLr7Tw==
+playwright-chromium@^1.24.2:
+  version "1.24.2"
+  resolved "https://registry.yarnpkg.com/playwright-chromium/-/playwright-chromium-1.24.2.tgz#a6cb0f2f4914bfea7b5ced33ac230439ed4c7627"
+  integrity sha512-L9U/T7GC0dmuHH1xUdS9tOmpOy2Pg2VF/BwkhXCwNnRJ9P9Ah+N5k659cobXfSj8CjKOHPMNTCpgM4X6ZdiDbw==
   dependencies:
-    playwright-core "1.24.1"
+    playwright-core "1.24.2"
 
-playwright-core@1.24.1:
-  version "1.24.1"
-  resolved "https://registry.yarnpkg.com/playwright-core/-/playwright-core-1.24.1.tgz#032eefaa8f674a4253a6c35a86787f2cbfcd8829"
-  integrity sha512-1RoSDe/oTQS1Ct7Pb8i+vcFKbKYpmVIBXk0IUiD8RvCUMnNl7EJF1OSQ9E8TZ5RYamWkW2Psir9e8Doyz1FnhQ==
+playwright-core@1.24.2:
+  version "1.24.2"
+  resolved "https://registry.yarnpkg.com/playwright-core/-/playwright-core-1.24.2.tgz#47bc5adf3dcfcc297a5a7a332449c9009987db26"
+  integrity sha512-zfAoDoPY/0sDLsgSgLZwWmSCevIg1ym7CppBwllguVBNiHeixZkc1AdMuYUPZC6AdEYc4CxWEyLMBTw2YcmRrA==
 
 prelude-ls@^1.2.1:
   version "1.2.1"
