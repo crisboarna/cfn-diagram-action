@@ -35,7 +35,7 @@
     "@actions/exec": "^1.1.1",
     "@mhlabs/cfn-diagram": "^1.1.36",
     "glob": "^8.0.3",
-    "playwright-chromium": "^1.24.1"
+    "playwright-chromium": "^1.25.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
