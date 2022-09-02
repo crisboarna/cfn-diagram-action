@@ -17,13 +17,15 @@ export default [
     ],
     plugins: [
       json(),
-      resolve(),
+      resolve({
+        preferBuiltins: false,
+      }),
       commonjs(),
       typescript({
         tsconfig: './tsconfig.json',
         compilerOptions: { module: 'esnext' },
       }),
-      terser(),
+      // terser(),
     ],
   },
 ];

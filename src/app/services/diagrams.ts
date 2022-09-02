@@ -79,10 +79,6 @@ export const generateDiagrams = async ({
 
         const params: ICfnDiaProp[] = [
           {
-            key: '',
-            value: diagramType,
-          },
-          {
             key: 't',
             value: path,
           },
@@ -100,13 +96,17 @@ export const generateDiagrams = async ({
           params.push({ key: '-stacks', value: diagramStacks });
         }
 
-        const commands = params.reduce(
-          (acc, cur) =>
-            (acc += `${cur.key ? `-${cur.key}` : cur.key} ${cur.value} `),
-          ``
+        const commands = params.map(
+          (cur) => `${cur.key ? `-${cur.key}` : cur.key} ${cur.value} `
         );
 
-        await exec(`cfn-dia ${commands}-c`);
+        commands.unshift(diagramType);
+
+        process.argv = commands;
+
+        console.log(process.argv);
+
+        require('@mhlabs/cfn-diagram/index');
 
         return {
           path: outputPathComputed,
