@@ -79,10 +79,6 @@ export const generateDiagrams = async ({
 
         const params: ICfnDiaProp[] = [
           {
-            key: '',
-            value: diagramType,
-          },
-          {
             key: 't',
             value: path,
           },
@@ -101,12 +97,14 @@ export const generateDiagrams = async ({
         }
 
         const commands = params.reduce(
-          (acc, cur) =>
-            (acc += `${cur.key ? `-${cur.key}` : cur.key} ${cur.value} `),
+          (acc, cur) => (acc += `-${cur.key} ${cur.value} `),
           ``
         );
 
-        await exec(`cfn-dia ${commands}-c`);
+        // underlying commander cli arg parser does not seem to work properly with current arg passing
+        // process.argv = commands;
+        // require('@mhlabs/cfn-diagram/index');
+        await exec(`cfn-dia ${diagramType} ${commands}-c`);
 
         return {
           path: outputPathComputed,

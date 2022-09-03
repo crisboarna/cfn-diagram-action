@@ -5,8 +5,8 @@ branding:
   icon: 'aperture'
   color: blue
 runs:
-  using: 'node16'
-  main: 'dist/index.js'
+  using: 'docker'
+  image: 'Dockerfile'
 inputs:
   path_input:
     description: 'Path where the Cloudformation templates can be found'

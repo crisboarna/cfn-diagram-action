@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  cfn-diagram-action-drawio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cfn-diagram-action-drawio
+    image: cfn-diagram-action
+    environment:
+      INPUT_PATH_INPUT: test/data/input/**/*.yaml
+      INPUT_PATH_OUTPUT: diagrams/dia
+      INPUT_VIEWPORT_WIDTH: 1920
+      INPUT_VIEWPORT_HEIGHT: 1080
+      INPUT_DIAGRAM_TYPE: d
+      GITHUB_WORKSPACE: /action
+    volumes:
+      - ./:/action
+
+  cfn-diagram-action-html:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cfn-diagram-action-html
+    image: cfn-diagram-action
+    environment:
+      INPUT_PATH_INPUT: test/data/input/**/*.yaml
+      INPUT_PATH_OUTPUT: diagrams/html
+      INPUT_VIEWPORT_WIDTH: 1920
+      INPUT_VIEWPORT_HEIGHT: 1080
+      INPUT_DIAGRAM_TYPE: h
+      GITHUB_WORKSPACE: /action
+    volumes:
+      - ./:/action

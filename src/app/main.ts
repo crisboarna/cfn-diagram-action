@@ -1,5 +1,4 @@
 import { setFailed } from '@actions/core';
-import { exec } from '@actions/exec';
 import { generateScreenshots } from './services/browser';
 import { getActionInputs } from './services/inputs';
 import { generateDiagrams, isGeneratingDiagramHtml } from './services/diagrams';
@@ -17,10 +16,10 @@ export async function run(): Promise<void> {
       viewport,
     } = getActionInputs();
 
-    if (diagramType && isGeneratingDiagramHtml(diagramType)) {
-      // configures playwright in the environment
-      await setup();
-    }
+    // if (diagramType && isGeneratingDiagramHtml(diagramType)) {
+    // configures playwright in the environment
+    // await setup();
+    // }
 
     // retrieves all files contained within the path if directory, or of single file if path includes file
     const files = getFilesMetadata(pathInput);
@@ -51,5 +50,5 @@ export async function run(): Promise<void> {
   }
 }
 
-const setup = async () =>
-  exec('npx', ['playwright-chromium', 'install', '--with-deps']);
+// const setup = async () =>
+//   exec('npx', ['playwright-chromium', 'install', '--with-deps']);

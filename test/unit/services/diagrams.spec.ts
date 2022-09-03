@@ -65,7 +65,7 @@ describe('diagrams', () => {
         `mkdir -p ${DEFAULT_PATH_DIAGRAM}${TEST_PATH_SUB_1}/${TEST_FILE_1.toLowerCase()}`
       );
       expect(execMock).toHaveBeenCalledWith(
-        `cfn-dia  ${TARGET_HTML_1} -t ${TEST_PATH_1} -o ${DEFAULT_PATH_DIAGRAM}${TEST_PATH_SUB_1}/${TEST_FILE_1.toLowerCase()} -c`
+        `cfn-dia ${TARGET_HTML_1} -t ${TEST_PATH_1} -o ${DEFAULT_PATH_DIAGRAM}${TEST_PATH_SUB_1}/${TEST_FILE_1.toLowerCase()} -c`
       );
     });
 
@@ -88,7 +88,7 @@ describe('diagrams', () => {
         `mkdir -p ${DEFAULT_PATH_DIAGRAM}${TEST_PATH_SUB_1}/${TEST_FILE_1.toLowerCase()}`
       );
       expect(execMock).toHaveBeenCalledWith(
-        `cfn-dia  ${TARGET_HTML_1} -t ${TEST_PATH_1} -o ${DEFAULT_PATH_DIAGRAM}${TEST_PATH_SUB_1}/${TEST_FILE_1.toLowerCase()} -c`
+        `cfn-dia ${TARGET_HTML_1} -t ${TEST_PATH_1} -o ${DEFAULT_PATH_DIAGRAM}${TEST_PATH_SUB_1}/${TEST_FILE_1.toLowerCase()} -c`
       );
     });
 
@@ -111,7 +111,7 @@ describe('diagrams', () => {
         `mkdir -p ${DEFAULT_PATH_DIAGRAM}${TEST_PATH_SUB_1}/${TEST_FILE_1.toLowerCase()}`
       );
       expect(execMock).toHaveBeenCalledWith(
-        `cfn-dia  ${TARGET_HTML_2} -t ${TEST_PATH_1} -o ${DEFAULT_PATH_DIAGRAM}${TEST_PATH_SUB_1}/${TEST_FILE_1.toLowerCase()} -c`
+        `cfn-dia ${TARGET_HTML_2} -t ${TEST_PATH_1} -o ${DEFAULT_PATH_DIAGRAM}${TEST_PATH_SUB_1}/${TEST_FILE_1.toLowerCase()} -c`
       );
     });
 
@@ -135,7 +135,7 @@ describe('diagrams', () => {
         `mkdir -p ${DEFAULT_PATH_DIAGRAM}${TEST_PATH_SUB_1}/${TEST_FILE_1.toLowerCase()}`
       );
       expect(execMock).toHaveBeenCalledWith(
-        `cfn-dia  ${TARGET_HTML_1} -t ${TEST_PATH_1} -o ${DEFAULT_PATH_DIAGRAM}${TEST_PATH_SUB_1}/${TEST_FILE_1.toLowerCase()} -e ${TEST_DIAGRAM_EXCLUDE_TYPE_1} -c`
+        `cfn-dia ${TARGET_HTML_1} -t ${TEST_PATH_1} -o ${DEFAULT_PATH_DIAGRAM}${TEST_PATH_SUB_1}/${TEST_FILE_1.toLowerCase()} -e ${TEST_DIAGRAM_EXCLUDE_TYPE_1} -c`
       );
     });
 
@@ -160,7 +160,7 @@ describe('diagrams', () => {
         `mkdir -p ${DEFAULT_PATH_DIAGRAM}${TEST_PATH_SUB_1}/${TEST_FILE_1.toLowerCase()}`
       );
       expect(execMock).toHaveBeenCalledWith(
-        `cfn-dia  ${TARGET_HTML_1} -t ${TEST_PATH_1} -o ${DEFAULT_PATH_DIAGRAM}${TEST_PATH_SUB_1}/${TEST_FILE_1.toLowerCase()} -e ${TEST_DIAGRAM_EXCLUDE_TYPE_1} --stacks ${TEST_DIAGRAM_STACKS_1} -c`
+        `cfn-dia ${TARGET_HTML_1} -t ${TEST_PATH_1} -o ${DEFAULT_PATH_DIAGRAM}${TEST_PATH_SUB_1}/${TEST_FILE_1.toLowerCase()} -e ${TEST_DIAGRAM_EXCLUDE_TYPE_1} --stacks ${TEST_DIAGRAM_STACKS_1} -c`
       );
     });
 
@@ -186,7 +186,7 @@ describe('diagrams', () => {
         `mkdir -p ${TEST_PATH_OUTPUT_1}${TEST_PATH_SUB_1}/${TEST_FILE_1.toLowerCase()}`
       );
       expect(execMock).toHaveBeenCalledWith(
-        `cfn-dia  ${TARGET_HTML_1} -t ${TEST_PATH_1} -o ${TEST_PATH_OUTPUT_1}${TEST_PATH_SUB_1}/${TEST_FILE_1.toLowerCase()} -e ${TEST_DIAGRAM_EXCLUDE_TYPE_1} --stacks ${TEST_DIAGRAM_STACKS_1} -c`
+        `cfn-dia ${TARGET_HTML_1} -t ${TEST_PATH_1} -o ${TEST_PATH_OUTPUT_1}${TEST_PATH_SUB_1}/${TEST_FILE_1.toLowerCase()} -e ${TEST_DIAGRAM_EXCLUDE_TYPE_1} --stacks ${TEST_DIAGRAM_STACKS_1} -c`
       );
     });
 
@@ -212,7 +212,7 @@ describe('diagrams', () => {
         `mkdir -p ${TEST_PATH_OUTPUT_1}${TEST_PATH_SUB_1}`
       );
       expect(execMock).toHaveBeenCalledWith(
-        `cfn-dia  ${TARGET_DRAWIO_1} -t ${TEST_PATH_1} -o ${TEST_PATH_OUTPUT_1}${TEST_PATH_SUB_1}/${TEST_FILE_1}.drawio -e ${TEST_DIAGRAM_EXCLUDE_TYPE_1} --stacks ${TEST_DIAGRAM_STACKS_1} -c`
+        `cfn-dia ${TARGET_DRAWIO_1} -t ${TEST_PATH_1} -o ${TEST_PATH_OUTPUT_1}${TEST_PATH_SUB_1}/${TEST_FILE_1}.drawio -e ${TEST_DIAGRAM_EXCLUDE_TYPE_1} --stacks ${TEST_DIAGRAM_STACKS_1} -c`
       );
     });
 
@@ -246,10 +246,10 @@ describe('diagrams', () => {
         `mkdir -p ${TEST_PATH_OUTPUT_1}${TEST_PATH_SUB_2}`
       );
       expect(execMock).toHaveBeenCalledWith(
-        `cfn-dia  ${TARGET_DRAWIO_2} -t ${TEST_PATH_1} -o ${TEST_PATH_OUTPUT_1}${TEST_PATH_SUB_1}/${TEST_FILE_1}.drawio -e ${TEST_DIAGRAM_EXCLUDE_TYPE_1},${TEST_DIAGRAM_EXCLUDE_TYPE_2} --stacks ${TEST_DIAGRAM_STACKS_1},${TEST_DIAGRAM_STACKS_2} -c`
+        `cfn-dia ${TARGET_DRAWIO_2} -t ${TEST_PATH_1} -o ${TEST_PATH_OUTPUT_1}${TEST_PATH_SUB_1}/${TEST_FILE_1}.drawio -e ${TEST_DIAGRAM_EXCLUDE_TYPE_1},${TEST_DIAGRAM_EXCLUDE_TYPE_2} --stacks ${TEST_DIAGRAM_STACKS_1},${TEST_DIAGRAM_STACKS_2} -c`
       );
       expect(execMock).toHaveBeenCalledWith(
-        `cfn-dia  ${TARGET_DRAWIO_2} -t ${TEST_PATH_2} -o ${TEST_PATH_OUTPUT_1}${TEST_PATH_SUB_2}/${TEST_FILE_2}.drawio -e ${TEST_DIAGRAM_EXCLUDE_TYPE_1},${TEST_DIAGRAM_EXCLUDE_TYPE_2} --stacks ${TEST_DIAGRAM_STACKS_1},${TEST_DIAGRAM_STACKS_2} -c`
+        `cfn-dia ${TARGET_DRAWIO_2} -t ${TEST_PATH_2} -o ${TEST_PATH_OUTPUT_1}${TEST_PATH_SUB_2}/${TEST_FILE_2}.drawio -e ${TEST_DIAGRAM_EXCLUDE_TYPE_1},${TEST_DIAGRAM_EXCLUDE_TYPE_2} --stacks ${TEST_DIAGRAM_STACKS_1},${TEST_DIAGRAM_STACKS_2} -c`
       );
     });
 
@@ -283,10 +283,10 @@ describe('diagrams', () => {
         `mkdir -p ${TEST_PATH_OUTPUT_1}${TEST_PATH_SUB_2}/${TEST_FILE_2.toLowerCase()}`
       );
       expect(execMock).toHaveBeenCalledWith(
-        `cfn-dia  ${TARGET_HTML_1} -t ${TEST_PATH_1} -o ${TEST_PATH_OUTPUT_1}${TEST_PATH_SUB_1}/${TEST_FILE_1.toLowerCase()} -e ${TEST_DIAGRAM_EXCLUDE_TYPE_1},${TEST_DIAGRAM_EXCLUDE_TYPE_2} --stacks ${TEST_DIAGRAM_STACKS_1},${TEST_DIAGRAM_STACKS_2} -c`
+        `cfn-dia ${TARGET_HTML_1} -t ${TEST_PATH_1} -o ${TEST_PATH_OUTPUT_1}${TEST_PATH_SUB_1}/${TEST_FILE_1.toLowerCase()} -e ${TEST_DIAGRAM_EXCLUDE_TYPE_1},${TEST_DIAGRAM_EXCLUDE_TYPE_2} --stacks ${TEST_DIAGRAM_STACKS_1},${TEST_DIAGRAM_STACKS_2} -c`
       );
       expect(execMock).toHaveBeenCalledWith(
-        `cfn-dia  ${TARGET_HTML_1} -t ${TEST_PATH_2} -o ${TEST_PATH_OUTPUT_1}${TEST_PATH_SUB_2}/${TEST_FILE_2.toLowerCase()} -e ${TEST_DIAGRAM_EXCLUDE_TYPE_1},${TEST_DIAGRAM_EXCLUDE_TYPE_2} --stacks ${TEST_DIAGRAM_STACKS_1},${TEST_DIAGRAM_STACKS_2} -c`
+        `cfn-dia ${TARGET_HTML_1} -t ${TEST_PATH_2} -o ${TEST_PATH_OUTPUT_1}${TEST_PATH_SUB_2}/${TEST_FILE_2.toLowerCase()} -e ${TEST_DIAGRAM_EXCLUDE_TYPE_1},${TEST_DIAGRAM_EXCLUDE_TYPE_2} --stacks ${TEST_DIAGRAM_STACKS_1},${TEST_DIAGRAM_STACKS_2} -c`
       );
     });
 
@@ -319,10 +319,10 @@ describe('diagrams', () => {
         `mkdir -p ${DEFAULT_PATH_DIAGRAM}${TEST_PATH_SUB_2}/${TEST_FILE_2.toLowerCase()}`
       );
       expect(execMock).toHaveBeenCalledWith(
-        `cfn-dia  ${TARGET_HTML_1} -t ${TEST_PATH_1} -o ${DEFAULT_PATH_DIAGRAM}${TEST_PATH_SUB_1}/${TEST_FILE_1.toLowerCase()} -e ${TEST_DIAGRAM_EXCLUDE_TYPE_1},${TEST_DIAGRAM_EXCLUDE_TYPE_2} --stacks ${TEST_DIAGRAM_STACKS_1},${TEST_DIAGRAM_STACKS_2} -c`
+        `cfn-dia ${TARGET_HTML_1} -t ${TEST_PATH_1} -o ${DEFAULT_PATH_DIAGRAM}${TEST_PATH_SUB_1}/${TEST_FILE_1.toLowerCase()} -e ${TEST_DIAGRAM_EXCLUDE_TYPE_1},${TEST_DIAGRAM_EXCLUDE_TYPE_2} --stacks ${TEST_DIAGRAM_STACKS_1},${TEST_DIAGRAM_STACKS_2} -c`
       );
       expect(execMock).toHaveBeenCalledWith(
-        `cfn-dia  ${TARGET_HTML_1} -t ${TEST_PATH_2} -o ${DEFAULT_PATH_DIAGRAM}${TEST_PATH_SUB_2}/${TEST_FILE_2.toLowerCase()} -e ${TEST_DIAGRAM_EXCLUDE_TYPE_1},${TEST_DIAGRAM_EXCLUDE_TYPE_2} --stacks ${TEST_DIAGRAM_STACKS_1},${TEST_DIAGRAM_STACKS_2} -c`
+        `cfn-dia ${TARGET_HTML_1} -t ${TEST_PATH_2} -o ${DEFAULT_PATH_DIAGRAM}${TEST_PATH_SUB_2}/${TEST_FILE_2.toLowerCase()} -e ${TEST_DIAGRAM_EXCLUDE_TYPE_1},${TEST_DIAGRAM_EXCLUDE_TYPE_2} --stacks ${TEST_DIAGRAM_STACKS_1},${TEST_DIAGRAM_STACKS_2} -c`
       );
     });
 
@@ -355,10 +355,10 @@ describe('diagrams', () => {
         `mkdir -p ${DEFAULT_PATH_DIAGRAM}${TEST_PATH_SUB_2}`
       );
       expect(execMock).toHaveBeenCalledWith(
-        `cfn-dia  ${TARGET_DRAWIO_2} -t ${TEST_PATH_1} -o ${DEFAULT_PATH_DIAGRAM}${TEST_PATH_SUB_1}/${TEST_FILE_1}.drawio -e ${TEST_DIAGRAM_EXCLUDE_TYPE_1},${TEST_DIAGRAM_EXCLUDE_TYPE_2} --stacks ${TEST_DIAGRAM_STACKS_1},${TEST_DIAGRAM_STACKS_2} -c`
+        `cfn-dia ${TARGET_DRAWIO_2} -t ${TEST_PATH_1} -o ${DEFAULT_PATH_DIAGRAM}${TEST_PATH_SUB_1}/${TEST_FILE_1}.drawio -e ${TEST_DIAGRAM_EXCLUDE_TYPE_1},${TEST_DIAGRAM_EXCLUDE_TYPE_2} --stacks ${TEST_DIAGRAM_STACKS_1},${TEST_DIAGRAM_STACKS_2} -c`
       );
       expect(execMock).toHaveBeenCalledWith(
-        `cfn-dia  ${TARGET_DRAWIO_2} -t ${TEST_PATH_2} -o ${DEFAULT_PATH_DIAGRAM}${TEST_PATH_SUB_2}/${TEST_FILE_2}.drawio -e ${TEST_DIAGRAM_EXCLUDE_TYPE_1},${TEST_DIAGRAM_EXCLUDE_TYPE_2} --stacks ${TEST_DIAGRAM_STACKS_1},${TEST_DIAGRAM_STACKS_2} -c`
+        `cfn-dia ${TARGET_DRAWIO_2} -t ${TEST_PATH_2} -o ${DEFAULT_PATH_DIAGRAM}${TEST_PATH_SUB_2}/${TEST_FILE_2}.drawio -e ${TEST_DIAGRAM_EXCLUDE_TYPE_1},${TEST_DIAGRAM_EXCLUDE_TYPE_2} --stacks ${TEST_DIAGRAM_STACKS_1},${TEST_DIAGRAM_STACKS_2} -c`
       );
     });
   });

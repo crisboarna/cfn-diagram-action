@@ -120,11 +120,11 @@ describe('main', () => {
 
       //then
 
-      expect(execMock).toHaveBeenCalledWith('npx', [
-        'playwright-chromium',
-        'install',
-        '--with-deps',
-      ]);
+      // expect(execMock).toHaveBeenCalledWith('npx', [
+      //   'playwright-chromium',
+      //   'install',
+      //   '--with-deps',
+      // ]);
       expect(getActionInputsMock).toHaveBeenCalledTimes(1);
       expect(getFilesMetadataMock).toHaveBeenCalledWith(TEST_PATH_INPUT);
       expect(generateDiagramsMock).toHaveBeenCalledWith({

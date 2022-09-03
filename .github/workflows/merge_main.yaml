@@ -72,23 +72,14 @@ jobs:
         with:
           path: .
 
-      - name: 🧰 Setup Node
-        uses: actions/setup-node@v3
-        with:
-          cache: ${{ !env.ACT && 'npm' || '' }}
-          node-version: '16'
-
-      - name: 📦 Install Dependencies
-        run: npm i --ignore-scripts
-
       - name: 🧪 Test Draw
-        run: npm run test:integration
-        env:
-          INPUT_PATH_INPUT: test/data/input/**/*.yaml
-          INPUT_PATH_OUTPUT: /dia
-          INPUT_VIEWPORT_WIDTH: 1920
-          INPUT_VIEWPORT_HEIGHT: 1080
-          INPUT_DIAGRAM_TYPE: d
+        uses: crisboarna/cfn-diagram-action@master
+        with:
+          path_input: test/data/input/**/*.yaml
+          path_output: /dia
+          viewport_width: 1920
+          viewport_height: 1080
+          diagram_type: d
 
       - name: 🧪 Verify API Draw
         run: diff dia/API.drawio test/data/output/draw/API.drawio
@@ -100,13 +91,13 @@ jobs:
         run: diff dia/vpc/VPC_Redshift.drawio test/data/output/draw/VPC_Redshift.drawio
 
       - name: 🧪 Test Html
-        run: npm run test:integration
-        env:
-          INPUT_PATH_INPUT: test/data/input/**/*.yaml
-          INPUT_PATH_OUTPUT: /dia
-          INPUT_VIEWPORT_WIDTH: 1920
-          INPUT_VIEWPORT_HEIGHT: 1080
-          INPUT_DIAGRAM_TYPE: h
+        uses: crisboarna/cfn-diagram-action@master
+        with:
+          path_input: test/data/input/**/*.yaml
+          path_output: /dia
+          viewport_width: 1920
+          viewport_height: 1080
+          diagram_type: h
 
       # Vis.js generates nodes in random positions, simple base64 or img diff tools will have too low similarity to be of value
       - name: 🧪 Verify API Html

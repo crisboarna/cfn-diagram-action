@@ -137,6 +137,12 @@ To run unit tests:
 ```shell
 yarn test
 ```
+
+To run integration tests locally via Docker Compose use 
+```shell
+docker compose up
+```
+the output files will be visible in 
 To run integration tests in mock Github Action environment(via Docker)
 ```shell
 yarn test:integration:local
