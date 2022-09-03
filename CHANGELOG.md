@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/crisboarna/cfn-diagram-action/compare/v1.0.1...v1.1.0) (2022-09-03)
+
+
+### Features
+
+* **action:** updated action to docker type ([23b06f6](https://github.com/crisboarna/cfn-diagram-action/commit/23b06f63f1853e3a2caa078db4df1acd30a4a75c))
+
 ## [1.0.1](https://github.com/crisboarna/cfn-diagram-action/compare/v1.0.0...v1.0.1) (2022-07-28)
 
 
