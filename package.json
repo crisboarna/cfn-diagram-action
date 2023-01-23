@@ -34,7 +34,7 @@
     "@actions/core": "^1.9.1",
     "@actions/exec": "^1.1.1",
     "@mhlabs/cfn-diagram": "^1.1.36",
-    "glob": "^8.0.3",
+    "glob": "^8.1.0",
     "playwright-chromium": "^1.25.1"
   },
   "devDependencies": {
@@ -43,7 +43,7 @@
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^8.0.6",
-    "@types/glob": "^7.2.0",
+    "@types/glob": "^8.0.1",
     "@types/jest": "^27.4.1",
     "@types/node": "18.7.14",
     "@typescript-eslint/eslint-plugin": "~5.36.1",
